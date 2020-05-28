@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: debugger
+  name: debugger
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: debugger
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: debugger
+    spec:
+      containers:
+      - image: panupongdeve/debugger
+        name: debugger
+        imagePullPolicy: Always
+        resources: {}
+status: {}

@@ -7,6 +7,7 @@ RUN \
 RUN apt-get install -y curl
 RUN apt-get install -y iputils-ping 
 RUN apt-get install -y openssh-server
+RUN apt-get install -y dnsutils
 
 RUN useradd remote_user && \
     echo "remote_user:1234" | chpasswd && \
